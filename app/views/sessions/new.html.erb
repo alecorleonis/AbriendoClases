@@ -1,7 +1,7 @@
 <div class="body"></div>
 		<div class="grad"></div>
 		<div class="header">
-			<div>Propuestas Diseño Grafico</div>
+			<div>Propuestas Informatica</div>
 		</div>
 		<div class ="subheader">
 		<span>Iniciar Sesion </span>
@@ -12,7 +12,15 @@
 		<div class="login">
 				<%= text_field_tag :email,params[:email], type: "text", :placeholder => "email"%>
 				<%= password_field_tag :password,nil,:placeholder => "password"%>
-				<p class="button"><%= submit_tag "Log in" %></p>
+				<p class="button"><%= submit_tag "Iniciar sesion" %></p>
 				<p><%= notice %></p>
+
+<a href="../../requests">
+<button  type="button"> Ver Propuestas </button></a> <br></br>
+<% @search = User.find_by_id(1) %>
+<% if @search.blank? %>
+	<a href="../../sign_up">
+	<button type="button"> Crear Administrador </button></a>
+<% end %>
 		</div>
 		<% end %>
