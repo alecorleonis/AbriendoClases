@@ -20,6 +20,11 @@
 		<%= @course.recommended_requirements %>
 	</p>
 
+	<p>
+		<strong>Carrera:</strong>
+		<%= @course.career.name %>
+	</p>
+<%= link_to 'Mostrar', edit_course_path(@course)%> |
 	<%= link_to 'Regresar', courses_path %>
 <% else %>
 	<%= controller.redirect_to requests_path %>
